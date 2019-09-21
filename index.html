@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Piano chord flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox"/>
+            <div class="slider round"></div>
+        </label>
+        <em>Dark Mode</em>
+    </div>
+    <header> 
+    <h4> Piano Chord Flashcards </h4>
+    </header>
+    <main>
+        <div id="questions"> </div>
+        <div class="buttons">
+            <div class="left-btn">
+                <button class="next" onclick="chord()" >Next</button>
+            </div>
+            <div class="right-btn">
+                <button class="reveal" onclick="displayAnswer()" >Cheat</button>
+            </div>
+        </div>
+        <div id="answers"></div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
