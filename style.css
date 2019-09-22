@@ -96,6 +96,7 @@ header{
 .left-btn{
   display: inline-block;
   padding-right: 2em;
+  padding-left: 0.5em;
 }
 .right-btn{
   display: inline-block;
@@ -137,9 +138,7 @@ main{
   padding-top: 100px;
   text-align: center;
 }
-.left-btn{
-  padding-left: 0.5em;
-}
+
 .next{
   display:inline-block;
   padding: .1em .5em;
