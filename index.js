@@ -1,4 +1,4 @@
-
+// Mode Switcher
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
 function switchTheme(e) {
@@ -25,7 +25,7 @@ if (currentTheme) {
 }
 
 
-// basic chords
+// THREE SKILLS OF CHORDS
 let basic_chords = [
     {
     question: 'A',
@@ -57,7 +57,7 @@ let basic_chords = [
     },
     {
     question: 'Cm',
-    answer: 'C, D#, G'
+    answer: 'C, Eb, G'
     },
     {
     question: `<pre>C#\nDb`,
@@ -97,7 +97,7 @@ let basic_chords = [
     },
     {
     question: 'Fm',
-    answer: 'F, G#, C'
+    answer: 'F, Ab, C'
     },
     {
     question: `<pre>F#\nGb`,
@@ -113,20 +113,117 @@ let basic_chords = [
     },
     {
     question: 'Gm',
-    answer: 'G, A#, D'
+    answer: 'G, Bb, D'
     },
     {
-    question: `<pre>G#\nAb`,
-    answer: `<pre>G#, C, D#\nAb, C, Eb`
+    question: `<pre>Ab\nG#`,
+    answer: `<pre>Ab, C, Eb`
     },
     {
-    question: `<pre>G#m\nAbm`,
-    answer: `<pre>G#, B, D#\nAb, B, Eb`
+    question: `<pre>Abm\nG#m`,
+    answer: `<pre>Ab, B, Eb`
     }
 ];
 
-// let line_question = basic_chds.question.split("\n");
-// let line_answer = basic_chords.answer.split("\n");
+let intermediate_chords = [
+  {
+  question: 'Amaj7',
+  answer: 'A, C#, E, G#'
+  },
+  {
+  question: 'Am7',
+  answer: 'A, C, E, G'
+  },
+  {
+  question: `Bbmaj7`,
+  answer: `Bb, D, F, A`
+  },
+  {
+  question: `Bbm7`,
+  answer: `Bb, Db, F, Ab`
+  },
+  {
+  question: 'Bmaj7',
+  answer: 'B, D#, F#, A#'
+  },
+  {
+  question: 'Bm7',
+  answer: 'B, D, F#, A'
+  },
+  {
+  question: 'Cmaj7',
+  answer: 'C, E, G, B'
+  },
+  {
+  question: 'Cm7',
+  answer: 'C, Eb, G, Bb'
+  },
+  {
+  question: `<pre>C#maj7\nDbmaj7`,
+  answer: `<pre>C#, F, G#, C\nDb, F, Ab, C`
+  },
+  {
+  question: `<pre>C#m7\nDbm7`,
+  answer: `<pre>C#, E, G#, B\nDb, E, Ab, B`
+  },
+  {
+  question: 'Dmaj7',
+  answer: 'D, F#, A, C#'
+  },
+  {
+  question: 'Dm7',
+  answer: 'D, F, A, C'
+  },
+  {
+  question: `<pre>D#maj7\nEbmaj7`,
+  answer: `<pre>D#, G, A#, D\nEb, G, Bb, D`
+  },
+  {
+  question: `<pre>D#m7\nEbm7`,
+  answer: `<pre>D#, F#, A#, C#\nEb, Gb, Bb, Db`
+  },
+  {
+  question: 'Emaj7',
+  answer: 'E, G#, B, D#'
+  },
+  {
+  question: 'Em7',
+  answer: 'E, G, B, D'
+  },
+  {
+  question: 'Fmaj7',
+  answer: 'F, A, C, E'
+  },
+  {
+  question: 'Fm7',
+  answer: 'F, Ab, C, Eb'
+  },
+  {
+  question: `<pre>F#maj7\nGbmaj7`,
+  answer: `<pre>F#, A#, C#, F\nGb, Bb, Db, F`
+  },
+  {
+  question: `<pre>F#m7\nGbm7`,
+  answer: `<pre>F#, A, C#, E\nGb, A, Db, E`
+  },
+  {
+  question: 'Gmaj7',
+  answer: 'G, B, D, F#'
+  },
+  {
+  question: 'Gm7',
+  answer: 'G, Bb, D, F'
+  },
+  {
+  question: `<pre>Abmaj7\nG#maj7`,
+  answer: `<pre>Ab, C, Eb, G`
+  },
+  {
+  question: `<pre>Abm7\nG#m7`,
+  answer: `<pre>Ab, B, Eb, Gb`
+  }
+];
+
 
 (function(){
   let randomIndex = basic_chords[Math.floor(Math.random()*basic_chords.length)];
@@ -136,27 +233,11 @@ let basic_chords = [
 
 let chord = () => {
     let randomIndex = basic_chords[Math.floor(Math.random()*basic_chords.length)];
-    // document.getElementById('questions').innerHTML = randomIndex.question.split(" ").join("<br>");
-    // document.getElementById('answers').innerHTML = randomIndex.answer.split("-").join("<br>");
     document.getElementById('questions').innerHTML = randomIndex.question;
     document.getElementById('answers').innerHTML = randomIndex.answer;
     document.getElementById('answers').style.display = 'none';
   }
 
-
-// let chord = () => {
-//     let randomIndex = basic_chords[Math.floor(Math.random()*basic_chords.length)];
-
-//     let line_question = randomIndex.question.split("\n");
-//     let line_answer = randomIndex.answer.split("\n");
-    
-//     line_question.forEach(line => {
-//     const question_el = document.getElementById('questions');
-//     const span = `<span>${line}</span><br/>`
-//     question_el.innerHTML = question_el.innerHTML.concat(span);
-//     const answer_el = document.getElementById('answers').innerHTML = randomIndex.answer;
-// })
-// }
 
 let displayAnswer = () => {
 document.getElementById('answers').style.display = 'block';

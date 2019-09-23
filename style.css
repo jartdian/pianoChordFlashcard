@@ -1,8 +1,9 @@
 :root{
+    box-sizing: border-box;
     --primary-color: #302AE6;
     --secondary-color: #536390;
     --font-color: #424242;
-    --bg-color: rgb(255, 255, 255);
+    --bg-color: rgb(221, 220, 220);
     --heading-color: #292922;
     
 }
@@ -56,7 +57,7 @@ header{
   }
   
   .slider {
-    background-color: #ccc;
+    background-color: rgb(53, 26, 26);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -93,10 +94,18 @@ header{
     border-radius: 50%;
   }
 
+.buttons{
+  display: flex;
+  padding-top: 100px;
+  /* justify-content: space-around; */
+  justify-content: space-between;
+}
+
+
 .left-btn{
   display: inline-block;
-  padding-right: 2em;
-  padding-left: 0.5em;
+  /* padding-right: 2em;
+  padding-left: 0.5em; */
 }
 .right-btn{
   display: inline-block;
@@ -134,19 +143,15 @@ main{
   text-align: center;
   height: 30px;
 }
-.buttons{
-  padding-top: 100px;
-  text-align: center;
-}
 
 .next{
   display:inline-block;
-  padding: .1em .5em;
+  padding: .1em .76em;
   border:0.16em solid rgba(185, 3, 3, 0);
   border-radius: .2em;
   box-sizing: border-box;
   text-decoration:none;
-  color:#FFFFFF;
+  color:rgb(255, 255, 255);
   transition: all 0.3s;
   background-color: #4CAF50;
   position: relative;
@@ -166,8 +171,11 @@ main{
     text-align: center;
 }
 
+/* @media only screen and (max-width: ) */
 
-@media only screen and (max-width: 400px) {
+
+
+@media only screen and (max-width: 420px) {
   body{ 
     font-size: 1.4em;
     
@@ -195,23 +203,22 @@ main{
   }
   .buttons{
     padding-top: 2em;
+    flex-direction: column;
+
   }
   .left-btn{
     display: block;
     margin: 0 auto;
-    padding: 1em 0;
+    padding-bottom: 1em;
   }
   .right-btn{
     display: block;
     margin: 0 auto;
-    padding: 0;
   }
   .next{
     padding: 0.2em 1em;
-    font-size: 1em;
   }
   .reveal{
-    padding: 0.2em .8em;
-    font-size: 1em;
+    padding: 0.2em .75em;
   }
 }
