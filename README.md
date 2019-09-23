@@ -1,3 +1,3 @@
 # pianoChordFlashcard
 
-A simple tool for learning piano chords in the style of flashcards
+A simple visual learning tool for piano chords , in the style of flashcards
