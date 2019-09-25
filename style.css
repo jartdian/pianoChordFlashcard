@@ -32,6 +32,20 @@ header{
     text-align: center;
     height: 7em;
 }
+.title{
+  padding: 0;
+  margin: 0;
+}
+.select-wrapper::before{
+  content: 'Difficulty :';
+  font-size: 0.6em;
+  color: #4CAF50;
+  text-shadow: -.5px .5px #000000;
+}
+select{
+  font-size: .6em;
+  padding: 2px 5px;
+}
 
 /*Simple css to style it like a toggle switch*/
 .theme-switch-wrapper {
@@ -170,10 +184,6 @@ main{
     padding-top: 3em;
     text-align: center;
 }
-
-/* @media only screen and (max-width: ) */
-
-
 
 @media only screen and (max-width: 420px) {
   body{ 

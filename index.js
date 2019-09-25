@@ -226,23 +226,40 @@ let intermediate_chords = [
 
 
 (function(){
-  let randomIndex = basic_chords[Math.floor(Math.random()*basic_chords.length)];
-  document.getElementById('questions').innerHTML = randomIndex.question;
-  document.getElementById('answers').innerHTML = randomIndex.answer;
-}())
+  let randomBasicChord = basic_chords[Math.floor(Math.random()*basic_chords.length)];
+  document.getElementById('questions').innerHTML = randomBasicChord.question;
+  document.getElementById('answers').innerHTML = randomBasicChord.answer;
+}());
+
 
 let chord = () => {
-    let randomIndex = basic_chords[Math.floor(Math.random()*basic_chords.length)];
-    document.getElementById('questions').innerHTML = randomIndex.question;
-    document.getElementById('answers').innerHTML = randomIndex.answer;
-    document.getElementById('answers').style.display = 'none';
+    let basic_value = document.getElementById("difficulty").value == 'basic';
+    let intermediate_value = document.getElementById("difficulty").value == 'intermediate';
+    let randomBasicChord = basic_chords[Math.floor(Math.random()*basic_chords.length)];
+    if(basic_value){
+      document.getElementById('questions').innerHTML = randomBasicChord.question;
+      document.getElementById('answers').innerHTML = randomBasicChord.answer;
+      document.getElementById('answers').style.display = 'none';
+    }
+    else if(intermediate_value){
+      let randomIntermediateChord = intermediate_chords[Math.floor(Math.random()*basic_chords.length)];
+      document.getElementById('questions').innerHTML = randomIntermediateChord.question;
+      document.getElementById('answers').innerHTML = randomIntermediateChord.answer;
+      document.getElementById('answers').style.display = 'none';
+    }
   }
 
+  
 
+
+
+// Default behaviour of the answer is display none
 let displayAnswer = () => {
 document.getElementById('answers').style.display = 'block';
 }
 
+
+// Keyboard controls
 document.addEventListener('keydown', handleKeyPress);
 
 function handleKeyPress (e) {
